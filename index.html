@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="AI UI Template Hub - A collection of modern AI interface templates.">
+
+    <title>AI UI Template Hub</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            <div class="logo-icon">✦</div>
+            <span>AI UI Hub</span>
+        </div>
+
+        <nav class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#templates">Templates</a>
+            <a href="#categories">Categories</a>
+            <a href="#about">About</a>
+        </nav>
+
+        <a href="https://github.com/" target="_blank" class="github-btn">
+            GitHub ↗
+        </a>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+            ☰
+        </button>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <main>
+
+        <section class="hero" id="home">
+
+            <div class="hero-content">
+
+                <div class="badge">
+                    ✨ Modern AI Interface Collection
+                </div>
+
+                <h1>
+                    Build the future of
+                    <span>AI Interfaces.</span>
+                </h1>
+
+                <p>
+                    Explore a collection of modern, responsive and
+                    interactive AI UI templates designed for the next
+                    generation of web applications.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#templates" class="primary-btn">
+                        Explore Templates
+                        <span>→</span>
+                    </a>
+
+                    <a href="#about" class="secondary-btn">
+                        Learn More
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="hero-visual">
+
+                <div class="ai-window">
+
+                    <div class="window-header">
+                        <div class="window-dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                        <span>AI Assistant</span>
+
+                        <span class="online">
+                            ● Online
+                        </span>
+                    </div>
+
+                    <div class="chat-preview">
+
+                        <div class="message user-message">
+                            Analyze my latest data
+                        </div>
+
+                        <div class="message ai-message">
+                            <div class="ai-avatar">✦</div>
+
+                            <div>
+                                <strong>AI Assistant</strong>
+                                <p>
+                                    Your data shows a 24.8% increase
+                                    in engagement this month.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="fake-input">
+                            Ask anything...
+                            <button>↑</button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= STATS ================= -->
+
+        <section class="stats">
+
+            <div class="stat">
+                <strong>06</strong>
+                <span>AI Templates</span>
+            </div>
+
+            <div class="stat">
+                <strong>03</strong>
+                <span>Team Members</span>
+            </div>
+
+            <div class="stat">
+                <strong>100%</strong>
+                <span>Responsive</span>
+            </div>
+
+            <div class="stat">
+                <strong>∞</strong>
+                <span>Possibilities</span>
+            </div>
+
+        </section>
+
+
+        <!-- ================= TEMPLATES ================= -->
+
+        <section class="templates-section" id="templates">
+
+            <div class="section-heading">
+
+                <div>
+                    <div class="small-label">
+                        OUR COLLECTION
+                    </div>
+
+                    <h2>
+                        Explore AI Templates
+                    </h2>
+
+                    <p>
+                        Interactive UI patterns for modern
+                        AI-powered applications.
+                    </p>
+                </div>
+
+                <div class="search-box">
+
+                    <span>⌕</span>
+
+                    <input
+                        type="text"
+                        id="templateSearch"
+                        placeholder="Search templates..."
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- CATEGORY FILTERS -->
+
+            <div class="categories" id="categories">
+
+                <button class="category-btn active"
+                        data-category="all">
+                    All
+                </button>
+
+                <button class="category-btn"
+                        data-category="chat">
+                    AI Chat
+                </button>
+
+                <button class="category-btn"
+                        data-category="generation">
+                    Content
+                </button>
+
+                <button class="category-btn"
+                        data-category="search">
+                    AI Search
+                </button>
+
+                <button class="category-btn"
+                        data-category="analytics">
+                    Analytics
+                </button>
+
+                <button class="category-btn"
+                        data-category="agents">
+                    AI Agents
+                </button>
+
+            </div>
+
+
+            <!-- TEMPLATE GRID -->
+
+            <div class="template-grid" id="templateGrid">
+
+
+                <!-- 1 -->
+
+                <article class="template-card"
+                         data-category="chat"
+                         data-name="AI Chat Interface">
+
+                    <div class="card-preview preview-chat">
+
+                        <div class="mini-sidebar">
+                            <div class="mini-logo">✦</div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+
+                        <div class="mini-chat">
+
+                            <div class="mini-top">
+                                AI Assistant
+                                <span>●</span>
+                            </div>
+
+                            <div class="mini-bubble user">
+                                Hello AI!
+                            </div>
+
+                            <div class="mini-bubble ai">
+                                How can I help you today?
+                            </div>
+
+                            <div class="mini-chat-input">
+                                Ask anything...
+                            </div>
+
+                        </div>
+
+                        <div class="card-badge">
+                            AI
+                        </div>
+
+                    </div>
+
+                    <div class="card-content">
+
+                        <div class="card-category">
+                            AI CHAT
+                        </div>
+
+                        <h3>AI Chat Interface</h3>
+
+                        <p>
+                            Modern conversational AI interface
+                            with chat history and interactive messages.
+                        </p>
+
+                        <div class="card-footer">
+
+                            <span>HTML • CSS • JS</span>
+
+                            <a href="templates/ai-chat/index.html">
+                                View Demo →
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- 2 -->
+
+                <article class="template-card"
+                         data-category="generation"
+                         data-name="AI Content Generator">
+
+                    <div class="card-preview preview-generator">
+
+                        <div class="generator-panel">
+
+                            <div class="mini-heading">
+                                Content Generator
+                            </div>
+
+                            <div class="mini-field">
+                                Write a blog post about AI...
+                            </div>
+
+                            <div class="mini-options">
+                                <span>Blog</span>
+                                <span>Professional</span>
+                                <span>Medium</span>
+                            </div>
+
+                            <div class="mini-generate">
+                                ✦ Generate Content
+                            </div>
+
+                        </div>
+
+                        <div class="card-badge">
+                            AI
+                        </div>
+
+                    </div>
+
+                    <div class="card-content">
+
+                        <div class="card-category">
+                            AI CONTENT
+                        </div>
+
+                        <h3>AI Content Generator</h3>
+
+                        <p>
+                            Generate blogs, emails, social posts
+                            and marketing content using AI.
+                        </p>
+
+                        <div class="card-footer">
+
+                            <span>HTML • CSS • JS</span>
+
+                            <a href="templates/ai-content-generator/index.html">
+                                View Demo →
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- 3 -->
+
+                <article class="template-card"
+                         data-category="generation"
+                         data-name="AI Document Summarizer">
+
+                    <div class="card-preview preview-summary">
+
+                        <div class="document-panel">
+
+                            <div class="document-lines">
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                            </div>
+
+                            <div class="summary-panel">
+
+                                <div class="summary-title">
+                                    AI Summary
+                                </div>
+
+                                <div></div>
+                                <div></div>
+                                <div></div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="card-badge">
+                            AI
+                        </div>
+
+                    </div>
+
+                    <div class="card-content">
+
+                        <div class="card-category">
+                            AI PRODUCTIVITY
+                        </div>
+
+                        <h3>AI Document Summarizer</h3>
+
+                        <p>
+                            Upload or enter documents and generate
+                            concise AI-powered summaries.
+                        </p>
+
+                        <div class="card-footer">
+
+                            <span>HTML • CSS • JS</span>
+
+                            <a href="templates/ai-document-summarizer/index.html">
+                                View Demo →
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- 4 -->
+
+                <article class="template-card"
+                         data-category="search"
+                         data-name="AI Search Interface">
+
+                    <div class="card-preview preview-search">
+
+                        <div class="search-preview">
+
+                            <div class="search-title">
+                                Ask anything
+                            </div>
+
+                            <div class="search-input">
+                                How does AI work?
+                                <span>⌕</span>
+                            </div>
+
+                            <div class="result-line">
+                                <b>AI Overview</b>
+                                <small>
+                                    Intelligent answer generated...
+                                </small>
+                            </div>
+
+                            <div class="result-line">
+                                <b>Related Sources</b>
+                                <small>
+                                    Research and references...
+                                </small>
+                            </div>
+
+                        </div>
+
+                        <div class="card-badge">
+                            AI
+                        </div>
+
+                    </div>
+
+                    <div class="card-content">
+
+                        <div class="card-category">
+                            AI SEARCH
+                        </div>
+
+                        <h3>AI Search Interface</h3>
+
+                        <p>
+                            Next-generation search experience with
+                            AI answers, sources and smart suggestions.
+                        </p>
+
+                        <div class="card-footer">
+
+                            <span>HTML • CSS • JS</span>
+
+                            <a href="templates/ai-search/index.html">
+                                View Demo →
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- 5 -->
+
+                <article class="template-card"
+                         data-category="analytics"
+                         data-name="Ask Your Data">
+
+                    <div class="card-preview preview-analytics">
+
+                        <div class="analytics-preview">
+
+                            <div class="mini-kpis">
+
+                                <span>
+                                    Revenue
+                                    <b>$48.2K</b>
+                                </span>
+
+                                <span>
+                                    Users
+                                    <b>12.8K</b>
+                                </span>
+
+                            </div>
+
+                            <div class="fake-chart">
+
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+
+                            </div>
+
+                            <div class="insight">
+                                ✦ AI Insight: Growth increased 18%
+                            </div>
+
+                        </div>
+
+                        <div class="card-badge">
+                            AI
+                        </div>
+
+                    </div>
+
+                    <div class="card-content">
+
+                        <div class="card-category">
+                            ANALYTICS
+                        </div>
+
+                        <h3>Ask Your Data</h3>
+
+                        <p>
+                            Natural-language analytics dashboard
+                            with AI-generated insights.
+                        </p>
+
+                        <div class="card-footer">
+
+                            <span>HTML • CSS • JS</span>
+
+                            <a href="templates/ask-your-data/index.html">
+                                View Demo →
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- 6 -->
+
+                <article class="template-card"
+                         data-category="agents"
+                         data-name="AI Agent Dashboard">
+
+                    <div class="card-preview preview-agent">
+
+                        <div class="agent-preview">
+
+                            <div class="agent-row">
+                                <span class="agent-icon">R</span>
+                                <span>
+                                    Research Agent
+                                    <small>Running</small>
+                                </span>
+                                <b>●</b>
+                            </div>
+
+                            <div class="agent-row">
+                                <span class="agent-icon">D</span>
+                                <span>
+                                    Data Agent
+                                    <small>Idle</small>
+                                </span>
+                                <b>●</b>
+                            </div>
+
+                            <div class="agent-row">
+                                <span class="agent-icon">C</span>
+                                <span>
+                                    Content Agent
+                                    <small>Running</small>
+                                </span>
+                                <b>●</b>
+                            </div>
+
+                        </div>
+
+                        <div class="card-badge">
+                            AI
+                        </div>
+
+                    </div>
+
+                    <div class="card-content">
+
+                        <div class="card-category">
+                            AI AGENTS
+                        </div>
+
+                        <h3>AI Agent Dashboard</h3>
+
+                        <p>
+                            Monitor AI agents, tasks, execution
+                            history and automation workflows.
+                        </p>
+
+                        <div class="card-footer">
+
+                            <span>HTML • CSS • JS</span>
+
+                            <a href="templates/ai-agent-dashboard/index.html">
+                                View Demo →
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <div class="no-results" id="noResults">
+                No templates found.
+            </div>
+
+        </section>
+
+
+        <!-- ================= ABOUT ================= -->
+
+        <section class="about" id="about">
+
+            <div class="about-icon">
+                ✦
+            </div>
+
+            <div>
+
+                <div class="small-label">
+                    ABOUT THE PROJECT
+                </div>
+
+                <h2>
+                    A community-driven collection
+                    of modern AI interfaces.
+                </h2>
+
+                <p>
+                    AI UI Hub is a collaborative UI template
+                    collection created as part of our GitHub
+                    collaboration project. Each interface is
+                    independently developed, responsive and
+                    designed around emerging AI interaction patterns.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-logo">
+            ✦ AI UI Hub
+        </div>
+
+        <p>
+            Built collaboratively with HTML, CSS, JavaScript
+            and GitHub.
+        </p>
+
+        <span>
+            © 2026 AI UI Template Hub
+        </span>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
