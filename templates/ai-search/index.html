@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Search</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+
+        <div class="logo">
+            <span class="logo-icon">✦</span>
+            <span>NovaSearch</span>
+        </div>
+
+        <div class="nav-links">
+            <a href="#search">Search</a>
+            <a href="#recent">Recent</a>
+            <a href="#sources">Sources</a>
+        </div>
+
+        <button class="theme-button" onclick="toggleTheme()">◐</button>
+
+    </nav>
+
+
+    <!-- Main -->
+    <main class="main-container">
+
+        <!-- Hero -->
+        <section class="hero" id="search">
+
+            <div class="badge">
+                ✦ AI POWERED SEARCH
+            </div>
+
+            <h1>
+                Search the web.<br>
+                <span>Understand everything.</span>
+            </h1>
+
+            <p class="hero-text">
+                Ask questions naturally and get intelligent answers
+                with useful sources and summaries.
+            </p>
+
+
+            <!-- Search Box -->
+            <div class="search-container">
+
+                <span class="search-icon">⌕</span>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Ask anything..."
+                    autocomplete="off"
+                >
+
+                <button
+                    class="clear-button"
+                    id="clearButton"
+                    onclick="clearSearch()">
+                    ×
+                </button>
+
+                <button
+                    class="search-button"
+                    onclick="performSearch()">
+                    Search
+                </button>
+
+            </div>
+
+
+            <!-- Suggestions -->
+            <div class="suggestions">
+
+                <button onclick="useSuggestion('What is artificial intelligence?')">
+                    What is artificial intelligence?
+                </button>
+
+                <button onclick="useSuggestion('Latest web development trends')">
+                    Web development trends
+                </button>
+
+                <button onclick="useSuggestion('How does machine learning work?')">
+                    How does machine learning work?
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- Category Filters -->
+        <section class="filters">
+
+            <button class="filter active" onclick="filterResults('all', this)">
+                All
+            </button>
+
+            <button class="filter" onclick="filterResults('research', this)">
+                Research
+            </button>
+
+            <button class="filter" onclick="filterResults('technology', this)">
+                Technology
+            </button>
+
+            <button class="filter" onclick="filterResults('news', this)">
+                News
+            </button>
+
+        </section>
+
+
+        <!-- Loading -->
+        <div id="loading" class="loading hidden">
+
+            <div class="spinner"></div>
+
+            <p>AI is searching and analyzing...</p>
+
+        </div>
+
+
+        <!-- Empty State -->
+        <section id="emptyState" class="empty-state">
+
+            <div class="empty-icon">✦</div>
+
+            <h2>Start your search</h2>
+
+            <p>
+                Enter a question above to discover AI-powered results.
+            </p>
+
+        </section>
+
+
+        <!-- Results -->
+        <section id="resultsSection" class="results-section hidden">
+
+            <!-- AI Answer -->
+            <div class="ai-answer">
+
+                <div class="answer-heading">
+                    <span>✦</span>
+                    <strong>AI Summary</strong>
+                </div>
+
+                <p id="aiAnswer">
+                    Artificial intelligence is a field of computing
+                    focused on creating systems that can perform tasks
+                    that normally require human intelligence.
+                </p>
+
+            </div>
+
+
+            <div class="results-header">
+
+                <div>
+                    <h2>Search Results</h2>
+                    <p id="resultCount">0 results</p>
+                </div>
+
+            </div>
+
+
+            <div id="resultsContainer"></div>
+
+        </section>
+
+
+        <!-- Recent Searches -->
+        <section class="recent-section" id="recent">
+
+            <div class="section-title">
+
+                <h2>Recent searches</h2>
+
+                <button onclick="clearHistory()">
+                    Clear history
+                </button>
+
+            </div>
+
+            <div id="historyContainer" class="history-container"></div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>NovaSearch • AI Search Interface Template</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
