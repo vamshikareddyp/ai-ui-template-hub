@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ask Your Data</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="brand">
+            <span>✦</span>
+            DataMind
+        </div>
+
+        <nav>
+
+            <a class="active" href="#">
+                ▦ Overview
+            </a>
+
+            <a href="#">
+                ◉ Analytics
+            </a>
+
+            <a href="#">
+                ◇ Reports
+            </a>
+
+            <a href="#">
+                ✦ Ask Your Data
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <a href="#">⚙ Settings</a>
+            <a href="#">? Help</a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- Main Content -->
+    <main class="content">
+
+        <header class="header">
+
+            <div>
+                <p class="small-title">ANALYTICS</p>
+                <h1>Overview</h1>
+            </div>
+
+            <div class="header-actions">
+
+                <select id="dateFilter" onchange="updateDashboard()">
+                    <option value="30">Last 30 days</option>
+                    <option value="7">Last 7 days</option>
+                    <option value="90">Last 90 days</option>
+                </select>
+
+                <div class="profile">
+                    AM
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- KPI Cards -->
+        <section class="kpi-grid">
+
+            <div class="kpi-card">
+
+                <p>Revenue</p>
+
+                <h2 id="revenue">₹84,250</h2>
+
+                <span class="positive">
+                    ↑ 12.4%
+                </span>
+
+            </div>
+
+            <div class="kpi-card">
+
+                <p>Users</p>
+
+                <h2 id="users">24,680</h2>
+
+                <span class="positive">
+                    ↑ 8.2%
+                </span>
+
+            </div>
+
+            <div class="kpi-card">
+
+                <p>Conversion Rate</p>
+
+                <h2 id="conversion">4.82%</h2>
+
+                <span class="negative">
+                    ↓ 1.3%
+                </span>
+
+            </div>
+
+            <div class="kpi-card">
+
+                <p>Growth</p>
+
+                <h2>18.6%</h2>
+
+                <span class="positive">
+                    ↑ 4.1%
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- Chart -->
+        <section class="chart-card">
+
+            <div class="card-header">
+
+                <div>
+                    <h2>Revenue Overview</h2>
+                    <p>Monthly revenue performance</p>
+                </div>
+
+                <button onclick="changeChart()">
+                    Change View
+                </button>
+
+            </div>
+
+            <div class="chart">
+
+                <div class="y-axis">
+                    <span>100K</span>
+                    <span>75K</span>
+                    <span>50K</span>
+                    <span>25K</span>
+                    <span>0</span>
+                </div>
+
+                <div class="bars" id="bars">
+
+                    <div class="bar" style="height:45%">
+                        <span>Jan</span>
+                    </div>
+
+                    <div class="bar" style="height:60%">
+                        <span>Feb</span>
+                    </div>
+
+                    <div class="bar" style="height:52%">
+                        <span>Mar</span>
+                    </div>
+
+                    <div class="bar" style="height:72%">
+                        <span>Apr</span>
+                    </div>
+
+                    <div class="bar" style="height:68%">
+                        <span>May</span>
+                    </div>
+
+                    <div class="bar" style="height:86%">
+                        <span>Jun</span>
+                    </div>
+
+                    <div class="bar" style="height:78%">
+                        <span>Jul</span>
+                    </div>
+
+                    <div class="bar" style="height:94%">
+                        <span>Aug</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- AI Section -->
+        <section class="bottom-grid">
+
+            <div class="ai-card">
+
+                <div class="ai-title">
+                    <span>✦</span>
+                    AI Insight
+                </div>
+
+                <h2 id="insightTitle">
+                    Revenue increased this month
+                </h2>
+
+                <p id="insightText">
+                    Revenue increased by 12.4%, mainly because of
+                    improved customer retention and higher average
+                    order values.
+                </p>
+
+                <button onclick="generateInsight()">
+                    Generate New Insight
+                </button>
+
+            </div>
+
+
+            <div class="questions-card">
+
+                <h2>Ask Your Data</h2>
+
+                <p>
+                    Ask a question about your business data.
+                </p>
+
+                <div class="question-input">
+
+                    <input
+                        id="questionInput"
+                        placeholder="Why did revenue change?"
+                    >
+
+                    <button onclick="askData()">
+                        Ask
+                    </button>
+
+                </div>
+
+                <div class="suggested">
+
+                    <button onclick="setQuestion('Why did revenue decrease?')">
+                        Why did revenue decrease?
+                    </button>
+
+                    <button onclick="setQuestion('Which product performed best?')">
+                        Which product performed best?
+                    </button>
+
+                    <button onclick="setQuestion('What is our conversion rate?')">
+                        What is our conversion rate?
+                    </button>
+
+                    <button onclick="setQuestion('Which month had the highest sales?')">
+                        Highest sales month?
+                    </button>
+
+                </div>
+
+                <div id="answer" class="answer">
+                    Ask a question to get an AI-generated insight.
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Recent Queries -->
+        <section class="recent">
+
+            <h2>Recent Queries</h2>
+
+            <div id="recentQueries"></div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

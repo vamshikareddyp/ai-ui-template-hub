@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Agent Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <span>✦</span>
+            AgentOS
+        </div>
+
+        <nav>
+
+            <a class="active" href="#">
+                ◈ Dashboard
+            </a>
+
+            <a href="#">
+                ◎ Agents
+            </a>
+
+            <a href="#">
+                ▣ Tasks
+            </a>
+
+            <a href="#">
+                ◉ Activity
+            </a>
+
+            <a href="#">
+                ⚙ Settings
+            </a>
+
+        </nav>
+
+        <div class="workspace">
+
+            <p>WORKSPACE</p>
+
+            <strong>AI Research Team</strong>
+
+            <span>5 agents active</span>
+
+        </div>
+
+    </aside>
+
+
+    <!-- Main -->
+
+    <main class="main">
+
+        <header class="topbar">
+
+            <div>
+
+                <p class="label">
+                    AI AGENT CONTROL CENTER
+                </p>
+
+                <h1>Good evening!</h1>
+
+            </div>
+
+            <div class="top-actions">
+
+                <button class="notification">
+                    🔔
+                </button>
+
+                <div class="avatar">
+                    AM
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- Stats -->
+
+        <section class="stats">
+
+            <div class="stat-card">
+
+                <span>Active Agents</span>
+
+                <strong>08</strong>
+
+                <small class="green">
+                    ● 5 online now
+                </small>
+
+            </div>
+
+            <div class="stat-card">
+
+                <span>Tasks Running</span>
+
+                <strong id="taskCount">24</strong>
+
+                <small>
+                    Across 8 agents
+                </small>
+
+            </div>
+
+            <div class="stat-card">
+
+                <span>Completed Today</span>
+
+                <strong>142</strong>
+
+                <small class="green">
+                    ↑ 18% vs yesterday
+                </small>
+
+            </div>
+
+            <div class="stat-card">
+
+                <span>Success Rate</span>
+
+                <strong>96.8%</strong>
+
+                <small class="green">
+                    Excellent
+                </small>
+
+            </div>
+
+        </section>
+
+
+        <!-- Main Grid -->
+
+        <section class="dashboard-grid">
+
+
+            <!-- Agents -->
+
+            <div class="agents-panel">
+
+                <div class="panel-header">
+
+                    <div>
+                        <h2>My AI Agents</h2>
+                        <p>Manage and monitor your agents</p>
+                    </div>
+
+                    <button onclick="addAgent()">
+                        + New Agent
+                    </button>
+
+                </div>
+
+
+                <div class="agent-list" id="agentList">
+
+                    <div class="agent-card">
+
+                        <div class="agent-icon purple">
+                            ✦
+                        </div>
+
+                        <div class="agent-info">
+
+                            <h3>Research Agent</h3>
+
+                            <p>
+                                Finds and summarizes research papers
+                            </p>
+
+                            <span class="status online">
+                                ● Online
+                            </span>
+
+                        </div>
+
+                        <button onclick="runAgent('Research Agent')">
+                            Run
+                        </button>
+
+                    </div>
+
+
+                    <div class="agent-card">
+
+                        <div class="agent-icon blue">
+                            ◇
+                        </div>
+
+                        <div class="agent-info">
+
+                            <h3>Data Analyst</h3>
+
+                            <p>
+                                Analyzes datasets and generates insights
+                            </p>
+
+                            <span class="status online">
+                                ● Online
+                            </span>
+
+                        </div>
+
+                        <button onclick="runAgent('Data Analyst')">
+                            Run
+                        </button>
+
+                    </div>
+
+
+                    <div class="agent-card">
+
+                        <div class="agent-icon orange">
+                            ◎
+                        </div>
+
+                        <div class="agent-info">
+
+                            <h3>Content Agent</h3>
+
+                            <p>
+                                Creates articles and marketing content
+                            </p>
+
+                            <span class="status idle">
+                                ● Idle
+                            </span>
+
+                        </div>
+
+                        <button onclick="runAgent('Content Agent')">
+                            Run
+                        </button>
+
+                    </div>
+
+
+                    <div class="agent-card">
+
+                        <div class="agent-icon green">
+                            ✓
+                        </div>
+
+                        <div class="agent-info">
+
+                            <h3>Support Agent</h3>
+
+                            <p>
+                                Handles customer support conversations
+                            </p>
+
+                            <span class="status online">
+                                ● Online
+                            </span>
+
+                        </div>
+
+                        <button onclick="runAgent('Support Agent')">
+                            Run
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Right Panel -->
+
+            <div class="activity-panel">
+
+                <div class="panel-header">
+
+                    <div>
+                        <h2>Live Activity</h2>
+                        <p>Real-time agent activity</p>
+                    </div>
+
+                    <span class="live">
+                        ● LIVE
+                    </span>
+
+                </div>
+
+
+                <div id="activityList" class="activity-list">
+
+                    <div class="activity">
+
+                        <div class="activity-icon">
+                            ✓
+                        </div>
+
+                        <div>
+                            <strong>Research Agent</strong>
+
+                            <p>
+                                Completed paper analysis
+                            </p>
+
+                            <small>
+                                2 minutes ago
+                            </small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="activity">
+
+                        <div class="activity-icon">
+                            ↗
+                        </div>
+
+                        <div>
+                            <strong>Data Analyst</strong>
+
+                            <p>
+                                Started revenue analysis
+                            </p>
+
+                            <small>
+                                5 minutes ago
+                            </small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="activity">
+
+                        <div class="activity-icon">
+                            ✓
+                        </div>
+
+                        <div>
+                            <strong>Support Agent</strong>
+
+                            <p>
+                                Resolved customer request
+                            </p>
+
+                            <small>
+                                8 minutes ago
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Task Section -->
+
+        <section class="tasks-panel">
+
+            <div class="panel-header">
+
+                <div>
+                    <h2>Running Tasks</h2>
+                    <p>Monitor current agent tasks</p>
+                </div>
+
+                <button onclick="clearTasks()">
+                    Clear completed
+                </button>
+
+            </div>
+
+
+            <div class="task-table">
+
+                <div class="task-row heading">
+
+                    <span>Task</span>
+                    <span>Agent</span>
+                    <span>Status</span>
+                    <span>Progress</span>
+
+                </div>
+
+
+                <div class="task-row">
+
+                    <span>Analyze Q3 Revenue</span>
+                    <span>Data Analyst</span>
+
+                    <span class="running">
+                        Running
+                    </span>
+
+                    <div class="progress">
+                        <div style="width:72%"></div>
+                    </div>
+
+                </div>
+
+
+                <div class="task-row">
+
+                    <span>Research AI Trends</span>
+                    <span>Research Agent</span>
+
+                    <span class="running">
+                        Running
+                    </span>
+
+                    <div class="progress">
+                        <div style="width:48%"></div>
+                    </div>
+
+                </div>
+
+
+                <div class="task-row">
+
+                    <span>Generate Weekly Report</span>
+                    <span>Content Agent</span>
+
+                    <span class="completed">
+                        Completed
+                    </span>
+
+                    <div class="progress">
+                        <div style="width:100%"></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
