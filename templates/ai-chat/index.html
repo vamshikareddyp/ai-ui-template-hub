@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Chat Interface</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="chat-app">
+
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+
+            <div class="sidebar-header">
+                <div class="brand">
+                    <div class="brand-logo">✦</div>
+
+                    <div>
+                        <h1>Nova AI</h1>
+                        <span>AI Assistant</span>
+                    </div>
+                </div>
+
+                <button
+                    class="close-sidebar"
+                    id="closeSidebar"
+                    aria-label="Close sidebar">
+                    ×
+                </button>
+            </div>
+
+            <button class="new-chat-button" id="newChatButton">
+                <span>＋</span>
+                New Chat
+            </button>
+
+            <div class="history-section">
+
+                <p class="history-title">Recent Chats</p>
+
+                <div id="chatHistory" class="chat-history">
+                    <button class="history-item">
+                        <span>💬</span>
+                        Getting started with AI
+                    </button>
+
+                    <button class="history-item">
+                        <span>💬</span>
+                        Website design ideas
+                    </button>
+
+                    <button class="history-item">
+                        <span>💬</span>
+                        JavaScript questions
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="sidebar-bottom">
+
+                <button id="clearChatButton" class="sidebar-action">
+                    🗑 Clear Current Chat
+                </button>
+
+                <button id="themeButton" class="sidebar-action">
+                    ☀️ Toggle Theme
+                </button>
+
+            </div>
+
+        </aside>
+
+        <!-- Main Chat Area -->
+        <main class="chat-main">
+
+            <!-- Header -->
+            <header class="chat-header">
+
+                <button
+                    class="menu-button"
+                    id="menuButton"
+                    aria-label="Open menu">
+                    ☰
+                </button>
+
+                <div class="mobile-brand">
+                    <div class="brand-logo">✦</div>
+
+                    <div>
+                        <strong>Nova AI</strong>
+                        <span>Online</span>
+                    </div>
+                </div>
+
+                <div class="header-actions">
+                    <button
+                        id="headerNewChat"
+                        class="header-button">
+                        ＋ New Chat
+                    </button>
+                </div>
+
+            </header>
+
+            <!-- Chat Messages -->
+            <section
+                class="messages-area"
+                id="messagesArea"
+                aria-live="polite">
+
+                <!-- Empty state -->
+                <div class="empty-state" id="emptyState">
+
+                    <div class="empty-icon">✦</div>
+
+                    <h2>How can I help you?</h2>
+
+                    <p>
+                        Ask Nova AI anything and explore ideas,
+                        write content, or solve problems.
+                    </p>
+
+                    <div class="suggestion-grid">
+
+                        <button class="suggestion">
+                            Explain artificial intelligence
+                        </button>
+
+                        <button class="suggestion">
+                            Give me website ideas
+                        </button>
+
+                        <button class="suggestion">
+                            Help me learn JavaScript
+                        </button>
+
+                        <button class="suggestion">
+                            Write a short story
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- Typing Indicator -->
+            <div
+                class="typing-indicator hidden"
+                id="typingIndicator">
+
+                <div class="typing-avatar">✦</div>
+
+                <div class="typing-bubble">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+            </div>
+
+            <!-- Message Composer -->
+            <div class="composer-wrapper">
+
+                <form id="messageForm" class="message-form">
+
+                    <textarea
+                        id="messageInput"
+                        rows="1"
+                        placeholder="Message Nova AI..."
+                        aria-label="Message Nova AI"></textarea>
+
+                    <button
+                        type="submit"
+                        id="sendButton"
+                        class="send-button"
+                        aria-label="Send message">
+                        ➤
+                    </button>
+
+                </form>
+
+                <p class="composer-note">
+                    Demo AI interface • Connect an API later for real AI responses
+                </p>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

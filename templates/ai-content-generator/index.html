@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>AI Content Generator</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="generator-app">
+
+        <!-- Header -->
+        <header class="top-header">
+
+            <div class="brand">
+
+                <div class="brand-logo">✦</div>
+
+                <div>
+                    <h1>Nova Write</h1>
+                    <span>AI Content Generator</span>
+                </div>
+
+            </div>
+
+            <div class="status">
+                <span class="status-dot"></span>
+                Demo Mode
+            </div>
+
+        </header>
+
+        <!-- Main Content -->
+        <main class="generator-main">
+
+            <section class="page-heading">
+
+                <p class="eyebrow">AI CONTENT STUDIO</p>
+
+                <h2>Create content in seconds.</h2>
+
+                <p>
+                    Describe what you need and customize the
+                    writing style, tone, and length.
+                </p>
+
+            </section>
+
+            <section class="workspace">
+
+                <!-- Left Panel -->
+                <div class="control-panel card">
+
+                    <div class="panel-heading">
+                        <h3>Content Brief</h3>
+                        <span>Step 1</span>
+                    </div>
+
+                    <label for="promptInput">
+                        What should the AI write?
+                    </label>
+
+                    <textarea
+                        id="promptInput"
+                        placeholder="Example: Write a blog post about how AI is changing education..."
+                    ></textarea>
+
+                    <div class="control-grid">
+
+                        <div class="field">
+
+                            <label for="contentType">
+                                Content Type
+                            </label>
+
+                            <select id="contentType">
+
+                                <option>Blog Post</option>
+                                <option>Social Media Post</option>
+                                <option>Product Description</option>
+                                <option>Email</option>
+                                <option>Advertisement</option>
+                                <option>Website Copy</option>
+
+                            </select>
+
+                        </div>
+
+                        <div class="field">
+
+                            <label for="tone">
+                                Tone
+                            </label>
+
+                            <select id="tone">
+
+                                <option>Professional</option>
+                                <option>Friendly</option>
+                                <option>Creative</option>
+                                <option>Casual</option>
+                                <option>Persuasive</option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                    <div class="field">
+
+                        <label for="length">
+                            Content Length
+                        </label>
+
+                        <select id="length">
+
+                            <option value="short">Short</option>
+                            <option value="medium" selected>
+                                Medium
+                            </option>
+                            <option value="long">Long</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="example-section">
+
+                        <div class="example-heading">
+                            Example prompts
+                        </div>
+
+                        <button class="example-prompt">
+                            Create a product description for smart headphones
+                        </button>
+
+                        <button class="example-prompt">
+                            Write an Instagram post about student productivity
+                        </button>
+
+                        <button class="example-prompt">
+                            Write an email announcing a college event
+                        </button>
+
+                    </div>
+
+                    <button
+                        id="generateButton"
+                        class="generate-button">
+
+                        <span>✦</span>
+                        Generate Content
+
+                    </button>
+
+                </div>
+
+                <!-- Right Panel -->
+                <div class="output-panel card">
+
+                    <div class="panel-heading">
+
+                        <div>
+                            <h3>Generated Content</h3>
+                            <span id="generationStatus">
+                                Ready to generate
+                            </span>
+                        </div>
+
+                        <div class="output-actions">
+
+                            <button
+                                id="copyButton"
+                                title="Copy content">
+                                Copy
+                            </button>
+
+                            <button
+                                id="regenerateButton"
+                                title="Regenerate content">
+                                ↻
+                            </button>
+
+                            <button
+                                id="clearButton"
+                                title="Clear content">
+                                ×
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <div
+                        id="loadingState"
+                        class="loading-state hidden">
+
+                        <div class="loader"></div>
+
+                        <p>Nova is creating your content...</p>
+
+                    </div>
+
+                    <div
+                        id="outputContent"
+                        class="output-content">
+
+                        <div class="output-placeholder">
+
+                            <div class="placeholder-icon">
+                                ✦
+                            </div>
+
+                            <h4>Your generated content will appear here</h4>
+
+                            <p>
+                                Add a prompt and click Generate Content
+                                to start.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="output-footer">
+
+                        <span id="wordCount">
+                            0 words
+                        </span>
+
+                        <span id="characterCount">
+                            0 characters
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

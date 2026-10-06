@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>AI Document Summarizer</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="summarizer-app">
+
+        <!-- Header -->
+        <header class="top-header">
+
+            <div class="brand">
+
+                <div class="brand-logo">✦</div>
+
+                <div>
+                    <h1>Nova Summarize</h1>
+                    <span>AI Document Summarizer</span>
+                </div>
+
+            </div>
+
+            <div class="header-badge">
+                Frontend Demo
+            </div>
+
+        </header>
+
+        <main class="summarizer-main">
+
+            <section class="page-heading">
+
+                <p class="eyebrow">
+                    DOCUMENT INTELLIGENCE
+                </p>
+
+                <h2>
+                    Turn long documents into clear summaries.
+                </h2>
+
+                <p>
+                    Upload a text document or paste your content,
+                    choose a summary length, and generate a
+                    demonstration summary.
+                </p>
+
+            </section>
+
+            <section class="workspace">
+
+                <!-- Input Panel -->
+                <div class="input-panel card">
+
+                    <div class="panel-header">
+
+                        <div>
+                            <h3>Document Input</h3>
+                            <span>
+                                Add text or upload a file
+                            </span>
+                        </div>
+
+                        <button
+                            id="clearButton"
+                            class="clear-button">
+                            Clear
+                        </button>
+
+                    </div>
+
+                    <!-- Upload Area -->
+                    <div
+                        class="upload-area"
+                        id="uploadArea">
+
+                        <div class="upload-icon">
+                            ↑
+                        </div>
+
+                        <h4>
+                            Drop a text file here
+                        </h4>
+
+                        <p>
+                            or click to browse your computer
+                        </p>
+
+                        <span class="file-types">
+                            Supported: TXT, MD
+                        </span>
+
+                        <input
+                            type="file"
+                            id="fileInput"
+                            accept=".txt,.md,text/plain"
+                            hidden>
+
+                    </div>
+
+                    <div class="divider">
+                        <span>OR</span>
+                    </div>
+
+                    <label for="documentText">
+                        Paste document text
+                    </label>
+
+                    <textarea
+                        id="documentText"
+                        placeholder="Paste your document text here..."
+                    ></textarea>
+
+                    <div class="text-statistics">
+
+                        <span id="wordCount">
+                            0 words
+                        </span>
+
+                        <span id="characterCount">
+                            0 characters
+                        </span>
+
+                    </div>
+
+                    <div class="summary-settings">
+
+                        <label for="summaryLength">
+                            Summary Length
+                        </label>
+
+                        <select id="summaryLength">
+
+                            <option value="short">
+                                Short
+                            </option>
+
+                            <option value="medium" selected>
+                                Medium
+                            </option>
+
+                            <option value="long">
+                                Detailed
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <button
+                        id="summarizeButton"
+                        class="summarize-button">
+
+                        <span>✦</span>
+                        Summarize Document
+
+                    </button>
+
+                </div>
+
+                <!-- Result Panel -->
+                <div class="result-panel card">
+
+                    <div class="panel-header">
+
+                        <div>
+                            <h3>Summary</h3>
+
+                            <span id="summaryStatus">
+                                Waiting for document
+                            </span>
+                        </div>
+
+                        <div class="result-actions">
+
+                            <button id="copyButton">
+                                Copy
+                            </button>
+
+                            <button id="downloadButton">
+                                Download
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Loading -->
+                    <div
+                        id="loadingState"
+                        class="loading-state hidden">
+
+                        <div class="loader"></div>
+
+                        <p>
+                            Analyzing document...
+                        </p>
+
+                    </div>
+
+                    <!-- Result -->
+                    <div
+                        id="summaryResult"
+                        class="summary-result">
+
+                        <div class="result-empty">
+
+                            <div class="result-icon">
+                                ✦
+                            </div>
+
+                            <h4>
+                                Your summary will appear here
+                            </h4>
+
+                            <p>
+                                Add a document and click
+                                Summarize Document.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="summary-footer">
+
+                        <span id="summaryWordCount">
+                            0 summary words
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <p class="demo-note">
+                Demo mode: this browser-only version uses
+                JavaScript text-processing logic. A real AI
+                summarization model can be connected through
+                a backend or Hugging Face API later.
+            </p>
+
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
